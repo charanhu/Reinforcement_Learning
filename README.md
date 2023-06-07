@@ -38,6 +38,28 @@ model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=log_path)
 model.learn(total_timesteps=20000)
 ```
 
+## Training Logs
+```
+------------------------------------------
+| time/                   |              |
+|    fps                  | 581          |
+|    iterations           | 10           |
+|    time_elapsed         | 35           |
+|    total_timesteps      | 20480        |
+| train/                  |              |
+|    approx_kl            | 0.0065331194 |
+|    clip_fraction        | 0.0254       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.57        |
+|    explained_variance   | 0.651        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 7.36         |
+|    n_updates            | 90           |
+|    policy_gradient_loss | -0.0054      |
+|    value_loss           | 23.8         |
+------------------------------------------
+```
+
 ## Save and Load the Model
 You can save the trained model to a file and load it later for evaluation or further training:
 ```python
